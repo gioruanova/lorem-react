@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+
 import Section from "../_components/Section";
 import Section2 from "../_components/Section2";
 

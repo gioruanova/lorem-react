@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import iconA from "../img/a.png";
-import IconB from "../img/b.png";
-import IconC from "../img/c.png";
 import IconD from "../img/d.png";
 import Icons from "../_components/Icons";
 
