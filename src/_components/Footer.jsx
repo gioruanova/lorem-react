@@ -30,7 +30,7 @@ function Footer({ falopa }) {
       <FooterCont2>
         <p>falopa</p>
       </FooterCont2>
-    )) || <FooterCont><p>Todos los derechos reservados 2021.</p></FooterCont>
+    )) || <FooterCont><p>Todos los derechos reservados 2021</p></FooterCont>
   );
 }
 
