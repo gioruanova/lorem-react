@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Button } from "../_components/Styles";
 import Image1 from "../img/1.png";
 import Image2 from "../img/3.jpg";
-import Image3 from "../img/customers.jpg";
+
 
 
 
@@ -38,11 +38,7 @@ const Bannerinfo = styled.div`
     text-align: left;
  `;
 
-const Bannerinfo2 = styled.div`
-  display: flex;
-  ${flexColumn};
-  align-items: center;
-`;
+
 
 const ImagenBanner = styled.div`
   background-image: url(${changePicture});

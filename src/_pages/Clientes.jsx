@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "../_components/Section";
-import styled from "styled-components";
+
 
 export default function Clientes() {
   return (

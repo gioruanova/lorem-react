@@ -1,6 +1,4 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
-
 import "./App.css";
 import WebLayuot from "./_layout/WebLayout";
 import Routes from "./_components/Routes";

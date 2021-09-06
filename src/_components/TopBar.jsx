@@ -90,22 +90,22 @@ export default function TopBar() {
       <MenuLinks>
         <a href="/">Inicio</a>
         <a href="/Us">Nosotros</a>
-        <a href="#">Productos</a>
+        <a href="/">Productos</a>
         <a href="/Services">Servicios</a>
         <a href="/Clientes">Clientes</a>
         <a href="/UserZone">Zona usuarios</a>
       </MenuLinks>
 
       <Social>
-        <a href="https://www.facebook.com" target="_blank">
+        <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
           <Facebook></Facebook>
         </a>
 
-        <a href="https://www.instagram.com" target="_blank">
+        <a href="https://www.instagram.com" target="_blank"rel="noreferrer">
           <Instagram></Instagram>
         </a>
 
-        <a href="https://www.linkedin.com" target="_blank">
+        <a href="https://www.linkedin.com" target="_blank"rel="noreferrer">
           <Linkedin></Linkedin>
         </a>
       </Social>

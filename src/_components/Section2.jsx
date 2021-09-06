@@ -74,13 +74,7 @@ const IconImage1 = styled.div`
   height: 3rem;
 `;
 
-const IconImage2 = styled(IconImage1)`
-  background-image: url(${IconB});
-`;
 
-const IconImage3 = styled(IconImage1)`
-  background-image: url(${IconC});
-`;
 
 const IconImage4 = styled(IconImage1)`
   background-image: url(${IconD});
