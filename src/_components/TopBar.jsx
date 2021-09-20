@@ -3,19 +3,25 @@ import styled from "styled-components";
 import Icon1 from "../img/face.png";
 import Icon2 from "../img/insta.png";
 import Icon3 from "../img/linke.png";
+import { isMobile } from "react-device-detect";
+
+const ContentNavbar = styled.div`
+  margin-bottom: ${isMobile ? "16rem" : "3rem"};
+`;
 
 const NavBar = styled.div`
   display: flex;
+  flex-direction: ${isMobile ? "column" : "row"};
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
   background-color: rgb(255 253 253 / 20%);
   width: 100%;
-  height: 3rem;
+  height: ${isMobile ? "15rem" : "3rem"};
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  color:white;
+  color: white;
 `;
 
 const Logo = styled.div`
@@ -36,7 +42,11 @@ span h2 {
 `;
 
 const MenuLinks = styled.div`
+display: flex;
+  flex-direction: ${isMobile ? "column" : "row"};
   a {
+    justify-content: space-between;
+    text-align: center;
     margin: 0 1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -54,6 +64,7 @@ const MenuLinks = styled.div`
 const Social = styled.a`
   display: flex;
   margin: 0 0 0 0.5rem;
+  padding: 1rem;
 `;
 
 const Facebook = styled.div`
@@ -77,40 +88,42 @@ const Linkedin = styled(Facebook)`
 
 export default function TopBar() {
   return (
-    <NavBar>
-      <Logo>
-        <a href="/">
-          <h1>
-            el
-            <span>
-              <h2>Lorem</h2>
-            </span>
-          </h1>
-        </a>
-      </Logo>
+    <ContentNavbar>
+      <NavBar>
+        <Logo>
+          <a href="/">
+            <h1>
+              el
+              <span>
+                <h2>Lorem</h2>
+              </span>
+            </h1>
+          </a>
+        </Logo>
 
-      <MenuLinks>
-        <a href="/">Inicio</a>
-        <a href="/Us">Nosotros</a>
-        <a href="/">Productos</a>
-        <a href="/Services">Servicios</a>
-        <a href="/Clientes">Clientes</a>
-        <a href="/UserZone">Zona usuarios</a>
-      </MenuLinks>
+        <MenuLinks>
+          <a href="/">Inicio</a>
+          <a href="/Us">Nosotros</a>
+          <a href="/">Productos</a>
+          <a href="/Services">Servicios</a>
+          <a href="/Clientes">Clientes</a>
+          <a href="/UserZone">Zona usuarios</a>
+        </MenuLinks>
 
-      <Social>
-        <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
-          <Facebook></Facebook>
-        </a>
+        <Social>
+          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+            <Facebook></Facebook>
+          </a>
 
-        <a href="https://www.instagram.com" target="_blank"rel="noreferrer">
-          <Instagram></Instagram>
-        </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+            <Instagram></Instagram>
+          </a>
 
-        <a href="https://www.linkedin.com" target="_blank"rel="noreferrer">
-          <Linkedin></Linkedin>
-        </a>
-      </Social>
-    </NavBar>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+            <Linkedin></Linkedin>
+          </a>
+        </Social>
+      </NavBar>
+    </ContentNavbar>
   );
 }
