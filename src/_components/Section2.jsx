@@ -3,14 +3,9 @@ import styled from "styled-components";
 import iconA from "../img/a.png";
 import IconD from "../img/d.png";
 import Icons from "../_components/Icons";
+import { isMobile } from "react-device-detect";
 
-function columnService({ column }) {
-  return (column && "column") || "row";
-}
 
-function columnWidth({ width }) {
-  return width && "width: 27rem; margin: 0 auto;";
-}
 
 function colorHoover({ color }) {
   return (
@@ -21,15 +16,16 @@ function colorHoover({ color }) {
 
 const SectionContenedor = styled.div`
   display: flex;
-  flex-direction: ${columnService};
+  flex-direction: ${isMobile ? "column" : "row"};
+  align-items: center;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: rgb(255 253 253 / 20%);
-  margin: 3rem 5rem;
-  ${columnWidth};
-  border-radius: 1rem;
-  padding: 2rem;
+  margin: ${isMobile ? "2rem 1rem 1rem 1rem" : "1rem 8rem 1rem 8rem"};
+    border-radius: 1rem;
+  padding: 1rem 3rem;
+  
   gap: 1rem;
   p {
     font-size: 1rem;
@@ -72,8 +68,6 @@ const IconImage1 = styled.div`
   height: 3rem;
 `;
 
-
-
 const IconImage4 = styled(IconImage1)`
   background-image: url(${IconD});
 `;
@@ -91,7 +85,7 @@ export default function Section2({ column, width, color }) {
       </Service>
 
       <Service color={color}>
-      <Icons name="asistencia" />
+        <Icons name="asistencia" />
         <h1>Asistencia</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit amet
@@ -100,7 +94,7 @@ export default function Section2({ column, width, color }) {
       </Service>
 
       <Service color={color}>
-      <Icons name="llamar" />
+        <Icons name="llamar" />
         <h1>Testimonios</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit amet

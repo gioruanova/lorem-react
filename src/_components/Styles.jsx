@@ -14,12 +14,13 @@ export const Background = styled.div`
 
 const BaseButton = styled.button`
   border-radius: 50rem;
+  width: auto;
   color: white;
   font-size: 0.8rem;
   padding: 0.5rem 2rem;
   text-transform: uppercase;
   border: none;
-  margin: 1rem 1rem 0 0;
+  margin: 0rem 1rem 1rem 0;
   background-color: rgb(255, 154, 136, 1);
   &:hover {
     cursor: pointer;

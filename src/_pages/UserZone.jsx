@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { isMobile } from "react-device-detect";
 
 const FormCont = styled.div`
   color: white;
-  width: 500px;
+  width: ${isMobile ? "250px" : "500px"};
   height: 450px;
   margin: 40px auto 0;
   background-color: rgba(0, 0, 0, 0, 0.6);

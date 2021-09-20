@@ -3,42 +3,30 @@ import styled from "styled-components";
 import { Button } from "../_components/Styles";
 import Image1 from "../img/1.png";
 import Image2 from "../img/3.jpg";
+import customers from "../img/customers.jpg";
+import { isMobile } from "react-device-detect";
 
-
-
-
-function changePicture({ pic1, pic2, pic3, theme }) {
-  return (pic1 && Image1) || (pic2 && Image2) || (pic3 && theme.backgroundImage);
-}
-
-function flexColumn({ column }) {
-  return (
-    column && "flex-direction: column;p,h1 {text-align: center !important};"
-  );
-}
-
-function margin({ marg }) {
-  return (marg && "margin: 3rem 30rem;") || "margin: 3rem 20rem;";
+function changePicture({ pic1, pic2, pic3 }) {
+  return (pic1 && Image1) || (pic2 && Image2) || (pic3 && customers);
 }
 
 const Bannerinfo = styled.div`
   display: flex;
-  ${flexColumn};
+  flex-direction: ${isMobile ? "column" : "row"};
   align-items: center;
   justify-content: space-evenly;
-  ${margin};
   background-color: rgb(255 253 253 / 20%);
+  margin: ${isMobile ? "2rem 1rem 1rem 1rem" : "1rem 8rem 1rem 8rem"};
   border-radius: 1rem;
   overflow: hidden;
-  padding: 2rem 4rem;
+  padding: 1rem 3rem;
   column-gap: 2rem;
+  text-align: ${isMobile ? "center" : "left"};
   p,
   h1 {
     color: var(--primario);
-    text-align: left;
+    text-align: ${isMobile ? "center":"left"};
  `;
-
-
 
 const ImagenBanner = styled.div`
   background-image: url(${changePicture});
@@ -47,13 +35,13 @@ const ImagenBanner = styled.div`
   background-size: contain;
   border-radius: 1rem;
   border-color: none;
-  width: 30rem;
+  width: 100%;
   height: 17rem;
 `;
 
 function Section({ title, text, btn1, btn2, column, pic1, pic2, pic3, marg }) {
   return (
-    <Bannerinfo column={column} marg={marg}>
+    <Bannerinfo>
       <div>
         <h1>{title}</h1>
         <p>{text}</p>

@@ -1,0 +1,46 @@
+import React, { useState } from "react";
+import styled from "styled-components";
+
+import { MenuComponent } from "../_components/Styles";
+import Icons from "../_components/Icons";
+
+export default function Menu() {
+  const [collapsed, setCollapsed] = useState(false);
+
+  const toggle = () => {
+    setCollapsed(!collapsed);
+  };
+
+  const Btn = styled.button`
+    background-color: transparent;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  `;
+  const Avatar = styled.div`
+    display: flex;
+    flex-direction: column;
+  `;
+
+  return (
+    <MenuComponent collapsed={collapsed}>
+      <Avatar>
+        {" "}
+        {(collapsed && (
+          <Btn onClick={toggle}>
+            <Icons name="collapse" />
+            <Icons name="logo2" />
+          </Btn>
+        )) || (
+          <Btn onClick={toggle}>
+            <Btn onClick={toggle}>
+              <Icons name="open" />
+            </Btn>
+            <Icons name="logosimple" />
+          </Btn>
+        )}
+      </Avatar>
+    </MenuComponent>
+  );
+}

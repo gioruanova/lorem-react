@@ -9,18 +9,19 @@ const NavBar = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: rgb(255 253 253 / 20%);
   width: 100%;
   height: 3rem;
   box-sizing: border-box;
   position: fixed;
   top: 0;
+  color:white;
 `;
 
 const Logo = styled.div`
 h1,
 a {
-  color: ${({ theme }) => theme.fontColor};
+  color: white;
   text-decoration: none;
   font-size: 1rem;
   font-weight: lighter;
@@ -31,6 +32,7 @@ span h2 {
   font-size: 1.5rem;
   font-weight: bold;
   display: inline;
+  color: white;
 `;
 
 const MenuLinks = styled.div`
@@ -40,7 +42,7 @@ const MenuLinks = styled.div`
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.75rem;
-    color: ${({ theme }) => theme.fontColor};
+    color: white;
     &:hover {
       cursor: pointer;
       transition: 3s all;
