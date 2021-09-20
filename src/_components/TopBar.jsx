@@ -4,6 +4,7 @@ import Icon1 from "../img/face.png";
 import Icon2 from "../img/insta.png";
 import Icon3 from "../img/linke.png";
 import { isMobile } from "react-device-detect";
+import { Link } from "react-router-dom";
 
 const ContentNavbar = styled.div`
   margin-bottom: ${isMobile ? "16rem" : "3rem"};
@@ -102,12 +103,12 @@ export default function TopBar() {
         </Logo>
 
         <MenuLinks>
-          <a href="/">Inicio</a>
-          <a href="/Us">Nosotros</a>
-          <a href="/">Productos</a>
-          <a href="/Services">Servicios</a>
-          <a href="/Clientes">Clientes</a>
-          <a href="/UserZone">Zona usuarios</a>
+        <Link to="/">Inicio</Link>
+          <Link to="/us">Nosotros</Link>
+          <Link to="/productos">Productos</Link>
+          <Link to="/services">Servicios</Link>
+          <Link to="/clientes">Clientes</Link>
+          <Link to="/userzone">Zona usuarios</Link>
         </MenuLinks>
 
         <Social>
