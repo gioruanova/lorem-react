@@ -4,7 +4,7 @@ import Icon1 from "../img/face.png";
 import Icon2 from "../img/insta.png";
 import Icon3 from "../img/linke.png";
 import { isMobile } from "react-device-detect";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const ContentNavbar = styled.div`
   margin-bottom: ${isMobile ? "16rem" : "3rem"};
