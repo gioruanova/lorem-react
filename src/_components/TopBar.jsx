@@ -94,9 +94,9 @@ export default function TopBar() {
         <Logo>
           <a href="/">
             <h1>
-              el
+              Lorem
               <span>
-                <h2>Lorem</h2>
+                <h2>Ipsum</h2>
               </span>
             </h1>
           </a>
