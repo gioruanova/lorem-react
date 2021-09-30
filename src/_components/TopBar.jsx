@@ -104,12 +104,12 @@ export default function TopBar() {
 
         <MenuLinks>
           
-            <Link to="/">Inicio</Link>
-            <Link to="/us">Nosotros</Link>
-            <Link to="/productos">Productos</Link>
-            <Link to="/services">Servicios</Link>
-            <Link to="/clientes">Clientes</Link>
-            <Link to="/userzone">Zona usuarios</Link>
+            <Link to="/" onClick={this.forceUpdate}>Inicio</Link>
+            <Link to="/us"onClick={this.forceUpdate}>Nosotros</Link>
+            <Link to="/productos"onClick={this.forceUpdate}>Productos</Link>
+            <Link to="/services"onClick={this.forceUpdate}>Servicios</Link>
+            <Link to="/clientes"onClick={this.forceUpdate}>Clientes</Link>
+            <Link to="/userzone"onClick={this.forceUpdate}>Zona usuarios</Link>
           
         </MenuLinks>
 
